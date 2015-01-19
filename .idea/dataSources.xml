@@ -12,7 +12,7 @@
     <data-source source="LOCAL" name="Rails pushnotify: test" uuid="fc754f73-bacd-476a-9b6b-4307ed32b10f">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/notifyus_test</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/pushnotify_test</jdbc-url>
       <user-name>postgres</user-name>
       <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
       <libraries />
@@ -20,7 +20,7 @@
     <data-source source="LOCAL" name="Rails pushnotify: production" uuid="3a00fbf0-e75c-4df1-a971-3b73a121ecc0">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/notifyus_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/pushnotify_production</jdbc-url>
       <user-name>postgres</user-name>
       <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
       <libraries />
