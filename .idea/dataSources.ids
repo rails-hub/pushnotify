@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails pushnotify: development" uuid="24d4cc81-da42-4784-9f71-c0e3122f8c7a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails pushnotify: test" uuid="fc754f73-bacd-476a-9b6b-4307ed32b10f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails pushnotify: production" uuid="3a00fbf0-e75c-4df1-a971-3b73a121ecc0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

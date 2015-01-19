@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2287199512">
+    <data-source source="LOCAL" name="Rails pushnotify: development" uuid="24d4cc81-da42-4784-9f71-c0e3122f8c7a">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/pushnotify_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails pushnotify: test" uuid="fc754f73-bacd-476a-9b6b-4307ed32b10f">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/notifyus_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails pushnotify: production" uuid="3a00fbf0-e75c-4df1-a971-3b73a121ecc0">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/notifyus_production</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
