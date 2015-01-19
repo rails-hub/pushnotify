@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141522237945) do
+ActiveRecord::Schema.define(version: 20141829222347) do
+
+  create_table "quotes", force: true do |t|
+    t.string   "title",      default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "quotes", ["title"], name: "index_quotes_on_title", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

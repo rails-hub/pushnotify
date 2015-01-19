@@ -60,3 +60,5 @@ gem 'simplecov', :require => false, :group => :test
 
 gem 'devise'
 gem 'apns'
+gem 'whenever', :require => false
+

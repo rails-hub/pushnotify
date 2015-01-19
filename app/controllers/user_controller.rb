@@ -12,7 +12,6 @@ class UserController < ApiController
       @user = User.find_by_email(email)
       if @user.blank?
         @user = User.create(:email => email, :username => register_api_params[:username], :password => register_api_params[:password], :device_token => register_api_params[:device_token], :type => register_api_params[:type])
-        PushController.push_message_to_user "Registered", @user, "Registered Successfully", @user.id
         render :json => @user
       else
         render :json => @user
