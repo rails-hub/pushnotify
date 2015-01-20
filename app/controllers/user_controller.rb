@@ -1,4 +1,4 @@
-require 'socket'
+require 'gcm'
 class UserController < ApiController
 
   skip_before_filter :check_token!
@@ -33,28 +33,16 @@ class UserController < ApiController
           Quote.send_quote
           success "Notifications Sent."
         elsif register_api_params[:type].downcase == 'android'
+          gcm = GCM.new("my_api_key")
+          registration_ids= ["12", "13"] # an array of one or more client registration IDs
+          options = {data: {quote: "test"}, collapse_key: "send_quote"}
+          response = gcm.send(registration_ids, options)
+          success "Notifications Sent."
         end
       end
     rescue Exception => e
       error "Something went wrong"
     end
-  end
-
-
-  def local_ip
-    orig, Socket.do_not_reverse_lookup = Socket.do_not_reverse_lookup, true # turn off reverse DNS resolution temporarily
-    UDPSocket.open do |s|
-      s.connect '64.233.187.99', 1
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-      puts "AAAAAAAAAAAAAAAAA",s.addr.last
-    end
-  ensure
-    Socket.do_not_reverse_lookup = orig
   end
 
   def update_password
