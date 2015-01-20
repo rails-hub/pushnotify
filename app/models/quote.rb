@@ -7,4 +7,5 @@ class Quote < ActiveRecord::Base
       PushController.push_message_to_user rand_record.title, f, "Quote", f.id
     end
   end
+
 end

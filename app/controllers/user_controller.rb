@@ -21,6 +21,24 @@ class UserController < ApiController
     end
   end
 
+  def notify_api
+    begin
+      email = register_api_params[:email].downcase
+      @user = User.find_by_email(email)
+      if @user.blank?
+        error "No such user found."
+      else
+        if register_api_params[:type].downcase == 'ios'
+          Quote.send_quote
+          success "Notifications Sent."
+        elsif register_api_params[:type].downcase == 'android'
+        end
+      end
+    rescue Exception => e
+      error "Something went wrong"
+    end
+  end
+
   def update_password
     @user = User.find_by_auth_token(params[:auth_token]) unless params[:auth_token].nil?
     if @user.valid_password?(params[:old_password])
@@ -39,9 +57,9 @@ class UserController < ApiController
   def admin_log_in
   end
 
-  # username - string (optional)
-  # password - string (optional)
-  # auth_token - string (optional)
+# username - string (optional)
+# password - string (optional)
+# auth_token - string (optional)
   def login_api
     @user = User.find_for_database_authentication({:username => params[:username].downcase})
 

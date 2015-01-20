@@ -9,7 +9,7 @@ class PushController < ApplicationController
 
   def self.push_message_to_users(message, users, type, id)
     APNS.host = 'gateway.sandbox.push.apple.com'
-    APNS.pem = "#{Rails.root}/cert.pem"
+    APNS.pem = "#{Rails.root}/ck.pem"
     APNS.port = 2195
 
     notifications = []
